@@ -107,10 +107,18 @@
 ---
 
 ## 个人总结Java8-21
++ 重点三个：模块系统、垃圾回收器G1、虚拟线程
 + 模块系统JPMS (Java9)
 + 垃圾回收器
   - G1（Java9正式）
   - ZGC(Java11实验性、Java15可用于生产、Java21支持分代回收)
   - Shenandoah(Java12实验性、Java15可用于生产、)
++ JDK8 及以前使用的是 PS Scavenge 和 PS MarkSweep，JDK9 及之后使用的是 G1 收集器
+  - `java -XX:+PrintCommandLineFlags -version` 查看默认GC等参数
+  - 直到Java21默认还是G1
 + Virtual Threads (Java19)
-+ Structured Concurrency (Incubator)
+
+---
+
++ 使用 Spring Boot（3.2）和 Java 21 虚拟线程（Project Loom）的 GraalVM 原生镜像：<https://springdoc.cn/all-together-now-spring-boot-3-2-graalvm-native-images-java-21-and-virtual/>
+  - 安装 GraalVM 和 Java 21
