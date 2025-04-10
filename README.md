@@ -3,6 +3,7 @@
 + Java11（2018 年 9 月）
 + Java17（2021 年 9 月）
 + Java21（2023 年 9 月）
++ Java24（2025 年 3 月）
 
 ---
 
@@ -102,7 +103,22 @@
   - 在 JDK 21 中，允许动态加载agent，但 JVM 会在发生时发出警告
 
 ### Java22
++ Unnamed Variables & Patterns
++ Class-File API (Preview)
++ Launch Multi-File Source-Code Programs
++ String Templates (Second Preview)
++ Vector API (Seventh Incubator)
++ Stream Gatherers (Preview)
+  - 针对stream引入了gather操作，允许用户自定义中间操作，比如自定义distinctBy操作
 
+### Java23
++ Markdown Documentation Comments
+  - java doc的注释目前已经支持html语法，本特性则支持使用markdown语法
+
+### Java24
++ Class-File API
++ Stream Gatherers
++ Permanently Disable the Security Manager
 
 ---
 
@@ -116,6 +132,7 @@
 + JDK8 及以前使用的是 PS Scavenge 和 PS MarkSweep，JDK9 及之后使用的是 G1 收集器
   - `java -XX:+PrintCommandLineFlags -version` 查看默认GC等参数
   - 直到Java21默认还是G1
+  - Java24是第一个将默认垃圾回收器从G1 GC切换到ZGC的版本
 + Virtual Threads (Java19)
 
 ---
